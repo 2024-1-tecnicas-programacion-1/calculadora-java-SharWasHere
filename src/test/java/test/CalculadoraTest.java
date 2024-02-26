@@ -1,4 +1,3 @@
-
 package test;
 
 import com.danielsanchez.calculadorajava.Calculadora;
@@ -14,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author danielsanchez
  */
 public class CalculadoraTest {
-    
+
     @Test
     public void testSuma() {
         double valorEsperado = 10;
@@ -54,6 +53,13 @@ public class CalculadoraTest {
     public void testModulo() {
         double valorEsperado = 1;
         double valorActual = Calculadora.calcular(10, 3, '%');
+        assertEquals(valorEsperado, valorActual);
+    }
+
+    @Test
+    public void testRaiz() {
+        double valorEsperado = 9.0;
+        double valorActual = Calculadora.calcular(81, 2, 'r');
         assertEquals(valorEsperado, valorActual);
     }
 
